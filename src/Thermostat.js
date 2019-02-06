@@ -14,3 +14,6 @@ Thermostat.prototype.up = function() {
 Thermostat.prototype.down = function() {
     this.getCurrentTemperature +-1
 }
+ Thermostat.prototype.minimum = function() {
+   this.getCurrentTemperature >= 10 
+ }
