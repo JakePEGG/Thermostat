@@ -17,4 +17,9 @@ var thermostat;
     expect(thermostat.getCurrentTemperature()).toEqual(21)
   }
 
+  it("it decreases the temparture with down()"), function() {
+    thermostat.down();
+    expect(thermostat.getCurrentTemperature()).toEqual(19)
+  }
+
 });
