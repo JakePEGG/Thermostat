@@ -28,5 +28,7 @@ var thermostat;
     }
     expect(thermostat.getCurrentTemperature()).toEqual(10);
   });
-
+  it('has power saving mode on by default', function() {
+    expect(thermostat.isPowerSavingModeOn()).toBe(true);
+  });
 });
