@@ -1,18 +1,11 @@
 'use strict';
 
-//
-// function Powersave() {
-//   this._temperature =< 25
-// }
-
 
 function Thermostat() {
   this.MINIMUM_TEMPERATURE = 10;
   this._temperature = 20;
   this.powerSavingMode = true;
 }
-
-
 
 Thermostat.prototype = {
   getCurrentTemperature: function() {
@@ -46,6 +39,15 @@ Thermostat.prototype = {
 }
 
 
+
+
+
+
+
+
+
+//
+// to be implemented to throw error.
 // // if temp will be below 10
 // //  throw 'message'
 //
@@ -56,12 +58,7 @@ Thermostat.prototype = {
 // else {
 //   do the thing
 // }
-
-
-
-
-
-
+//
 
 // Thermostat.prototype.getCurrentTemperature = function() {
 //   return this._temperature;
