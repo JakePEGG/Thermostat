@@ -57,7 +57,17 @@ Thermostat.prototype = {
 
 
 
+// energyusage: function() {
+// if (this.getCurrentTemperature) <= 18
+//  return "low energy usage"
+// else if (this.getCurrentTemperature) <=25
+//  return "medium energy usage"
+// else
+//  return "high energy usage"
+//}
 
+//< 18 is low-usage, < 25 is medium-usage,
+//anything else is high-usage.
 
 
 

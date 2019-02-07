@@ -67,5 +67,18 @@ var thermostat;
       expect(thermostat.getCurrentTemperature()).toEqual(20)
     });
   });
-  
+  describe("returns low energy usage when <18",function() {
+    it('returns green & low energy usage', function(){
+      thermostat.getCurrentTemperature(<18)
+      expect(thermostat.energyusage()).toReturn("low energy usage")
+    });
+  });
+
+
+
+
+
+
+
+
 });
