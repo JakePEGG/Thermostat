@@ -12,7 +12,9 @@ Thermostat.prototype = {
     return this._temperature;
   },
   up: function() {
-    console.log(this)
+    if(this.isMaximumTemperature()) {
+      return;
+    }
       this._temperature += 1;
   },
   down: function() {
