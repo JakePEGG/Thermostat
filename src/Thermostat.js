@@ -7,7 +7,8 @@
 
 
 function Thermostat() {
-  this._temperature = 20
+  this.MINIMUM_TEMPERATURE = 10;
+  this._temperature = 20;
 }
 
 
@@ -29,6 +30,17 @@ Thermostat.prototype = {
 }
 
 
+
+// // if temp will be below 10
+// //  throw 'message'
+//
+// var newTemp = this._temperature - reduce
+// if newTemp < 10  {
+//   throw 'message'
+// }
+// else {
+//   do the thing
+// }
 
 
 
