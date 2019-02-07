@@ -60,4 +60,12 @@ var thermostat;
     expect(thermostat.getCurrentTemperature()).toEqual(32);
     });
   });
+
+  describe("When reset button is pressed it defaults to 20", function(){
+    it('resets to 20 degrees', function(){
+      thermostat.resetTemperature
+      expect(thermostat.getCurrentTemperature()).toEqual(20)
+    });
+  });
+  
 });
