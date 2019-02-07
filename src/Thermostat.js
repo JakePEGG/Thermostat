@@ -18,17 +18,22 @@ Thermostat.prototype = {
     return this._temperature;
   },
   up: function() {
-      this.getCurrentTemperaturetemperate += 1;
+    console.log(this)
+      this._temperature += 1;
   },
   down: function() {
-      this.getCurrentTemperature +-1
+    if(this._temperature <= this.MINIMUM_TEMPERATURE) {
+      return;
+    }
+      this._temperature -= 1
   },
   minimum: function() {
-    this.getCurrentTemperature >= 10
+    this.getCurrentTemperature() >= 10
+  },
+  isMinimumTemperature: function() {
+    return this._temperature === this.MINIMUM_TEMPERATURE;
   }
-
 }
-
 
 
 // // if temp will be below 10

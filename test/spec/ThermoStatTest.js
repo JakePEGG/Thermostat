@@ -12,15 +12,15 @@ var thermostat;
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
 
-  it("increases the temperature with up()"), function() {
+  it("increases the temperature with up()", function() {
     thermostat.up();
     expect(thermostat.getCurrentTemperature()).toEqual(21)
-  }
+  })
 
-  it("it decreases the temparture with down()"), function() {
+  it("it decreases the temparture with down()", function() {
     thermostat.down();
     expect(thermostat.getCurrentTemperature()).toEqual(19)
-  }
+  })
 
   it("has a minimum of 10 degrees", function() {
     for (var i = 0; i < 11; i++) {
