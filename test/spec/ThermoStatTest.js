@@ -22,8 +22,20 @@ var thermostat;
     expect(thermostat.getCurrentTemperature()).toEqual(19)
   }
 
-  it("Sets the minimum temperature as 10"), function() {
-    thermostat.minimum();
-    expect(thermostat.getCurrentTemperature()).toBe(>10)
-  }
+  // it("Sets the minimum temperature as 10"), function() {
+  //   thermostat.minimum();
+  //   expect(thermostat.getCurrentTemperature()).toBe(>10)
+  // }
 });
+
+
+// if temp will be below 10
+//  throw 'message'
+
+var newTemp = this._temperature - reduce
+if newTemp < 10  {
+  throw 'message'
+}
+else {
+  do the thing
+}
