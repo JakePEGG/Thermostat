@@ -1,41 +1,58 @@
 'use strict';
 
-describe('Thermostat', function() {
+describe ('Thermostat', function(){
 
-var thermostat;
+  let thermostat;
 
-  beforeEach(function() {
+  beforeEach(function(){
     thermostat = new Thermostat();
   });
 
-  it('starts at 20 degrees', function() {
-    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  it('has a starting temp of 20', function(){
+    expect(thermostat.temperature()).toEqual(20);
   });
 
-  it("increases the temperature with up()"), function() {
-    thermostat.up();
-    expect(thermostat.getCurrentTemperature()).toEqual(21)
-  }
+  it('can raise temperature', function(){
+    thermostat.up(1);
+    expect(thermostat.temperature()).toEqual(21);
+  });
 
-  it("it decreases the temparture with down()"), function() {
-    thermostat.down();
-    expect(thermostat.getCurrentTemperature()).toEqual(19)
-  }
+  it('can lower temperature', function(){
+    thermostat.down(10);
+    expect(thermostat.temperature()).toEqual(10);
+  });
 
-  // it("Sets the minimum temperature as 10"), function() {
-  //   thermostat.minimum();
-  //   expect(thermostat.getCurrentTemperature()).toBe(>10)
-  // }
+  it('cannot be set lower than 10', function(){
+    thermostat.down(15);
+    expect(thermostat.temperature()).toEqual(10);
+  });
+
+  it('cannot set temperature above 25 if power saving is on', function(){
+      thermostat._isPowerSaving = true;
+      thermostat.up(10);
+      expect(thermostat.temperature()).toEqual(25);
+  });
+
+  it ('cannot set temperature above 35 if power saving is off', function(){
+    thermostat._isPowerSaving = false;
+    thermostat.up(10);
+    expect(thermostat.temperature()).toEqual(30);
+    thermostat.up(10);
+    expect(thermostat.temperature()).toEqual(35);
+  });
+
+  it('can be reset to 20', function() {
+    thermostat.up(5);
+    thermostat.reset();
+    expect(thermostat.temperature()).toEqual(20);
+  });
+
+  it('can report its usage', function() {
+    expect(thermostat.usage()).toEqual('medium-usage');
+    thermostat.down(10);
+    expect(thermostat.usage()).toEqual('low-usage');
+    thermostat._isPowerSaving = false;
+    thermostat.up(20);
+    expect(thermostat.usage()).toEqual('high-usage');
+  });
 });
-
-
-// if temp will be below 10
-//  throw 'message'
-
-var newTemp = this._temperature - reduce
-if newTemp < 10  {
-  throw 'message'
-}
-else {
-  do the thing
-}
